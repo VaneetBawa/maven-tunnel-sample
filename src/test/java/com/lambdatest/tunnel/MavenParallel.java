@@ -62,7 +62,8 @@ public class MavenParallel implements IExecutionListener {
   @Test()
   public void testTunnel() throws Exception {
     // Check LocalHost on XAMPP
-    driver.get("http://localhost.lambdatest.com");
+   // driver.get("http://localhost.lambdatest.com");
+    driver.get("http://localhost:8080/job/testing_Maven/");
     // Let's check that the item we added is added in the list.
     driver.get("https://google.com");
   }
