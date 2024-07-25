@@ -49,7 +49,7 @@ public class MavenParallel implements IExecutionListener {
     capabilities.setCapability("network", true);
     capabilities.setCapability("console", true);
     capabilities.setCapability("visual", true);
-    capabilities.setCapability("tunnelName", "MavenParallel");
+    //capabilities.setCapability("tunnelName", "MavenParallel");
 
     try {
       driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"),
