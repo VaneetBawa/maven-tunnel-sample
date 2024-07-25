@@ -20,20 +20,20 @@ public class MavenParallel implements IExecutionListener {
   String accessKey = System.getenv("LT_ACCESS_KEY");
   Tunnel t;
 
-  @Override
-  public void onExecutionStart() {
-    try {
-      // start the tunnel
-      t = new Tunnel();
-      HashMap<String, String> options = new HashMap<String, String>();
-      options.put("user", username);
-      options.put("key", accessKey);
-      options.put("tunnelName", "MavenParallel");
-      t.start(options);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
+  // @Override
+  // public void onExecutionStart() {
+  //   try {
+  //     // start the tunnel
+  //     t = new Tunnel();
+  //     HashMap<String, String> options = new HashMap<String, String>();
+  //     options.put("user", username);
+  //     options.put("key", accessKey);
+  //     options.put("tunnelName", "MavenParallel");
+  //     t.start(options);
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //   }
+  // }
 
   @BeforeTest
   @org.testng.annotations.Parameters(value = { "browser", "version", "platform", "resolution" })
@@ -75,13 +75,13 @@ public class MavenParallel implements IExecutionListener {
     }
   }
 
-  @Override
-  public void onExecutionFinish() {
-    try {
-      // stop the Tunnel;
-      t.stop();
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
+  // @Override
+  // public void onExecutionFinish() {
+  //   try {
+  //     // stop the Tunnel;
+  //     t.stop();
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //   }
+  // }
 }
