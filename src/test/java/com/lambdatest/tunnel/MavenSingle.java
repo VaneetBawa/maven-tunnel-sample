@@ -25,7 +25,7 @@ public class MavenSingle implements IExecutionListener {
   @org.testng.annotations.Parameters(value = { "browser", "version", "platform", "resolution" })
   public void setUp(String browser, String version, String platform, String resolution) throws Exception {
     DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("build", "Single Maven Tunnel");
+    capabilities.setCapability("build", System.getenv("LT_BUILD_NAME"));
     capabilities.setCapability("name", "Maven Tunnel");
     capabilities.setCapability("browserName", browser);
     capabilities.setCapability("version", version);
