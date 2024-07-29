@@ -34,7 +34,7 @@ public class MavenSingle implements IExecutionListener {
     capabilities.setCapability("network", true);
     capabilities.setCapability("console", true);
     capabilities.setCapability("visual", true);
-    //capabilities.setCapability("tunnelName", "MavenSingle");
+    capabilities.setCapability("tunnelName", System.getenv("LT_TUNNEL_NAME"));
 
     // create tunnel instance
     //t = new Tunnel();
