@@ -41,7 +41,7 @@ public class MavenSingle implements IExecutionListener {
     t = new Tunnel();
     HashMap<String, String> options = new HashMap<String, String>();
     options.put("user", username);
-    options.put("logFile", "src/test");
+    options.put("logFile", "src/test/java/com/lambdatest/tunnel");
     options.put("key", access_key);
     options.put("tunnelName", "MavenSingle");
 
