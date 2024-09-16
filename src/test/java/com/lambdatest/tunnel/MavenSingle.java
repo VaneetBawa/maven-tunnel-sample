@@ -34,19 +34,19 @@ public class MavenSingle implements IExecutionListener {
     capabilities.setCapability("network", true);
     capabilities.setCapability("console", true);
     capabilities.setCapability("visual", true);
-    capabilities.setCapability("tunnelName", "MavenSingle");
+   // capabilities.setCapability("tunnelName", "MavenSingle");
 
     System.out.println("name is" + capabilities);
     // create tunnel instance
-    t = new Tunnel();
-    HashMap<String, String> options = new HashMap<String, String>();
-    options.put("user", username);
-    options.put("logFile", "./");
-    options.put("key", access_key);
-    options.put("tunnelName", "MavenSingle");
+    // t = new Tunnel();
+    // HashMap<String, String> options = new HashMap<String, String>();
+    // options.put("user", username);
+    // options.put("logFile", "./");
+    // options.put("key", access_key);
+    // options.put("tunnelName", "MavenSingle");
 
-    // start tunnel
-    t.start(options);
+    // // start tunnel
+    // t.start(options);
     driver = new RemoteWebDriver(new URL("http://" + username + ":" + access_key + "@hub.lambdatest.com/wd/hub"),
         capabilities);
     System.out.println("Started session");
@@ -65,6 +65,6 @@ public class MavenSingle implements IExecutionListener {
     ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
     driver.quit();
     // close tunnel
-    t.stop();
+  //  t.stop();
   }
 }
