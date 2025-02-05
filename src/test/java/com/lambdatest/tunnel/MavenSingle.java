@@ -34,7 +34,7 @@ public class MavenSingle implements IExecutionListener {
     capabilities.setCapability("network", true);
     capabilities.setCapability("console", true);
     capabilities.setCapability("visual", true);
-   // capabilities.setCapability("tunnelName", "MavenSingle");
+    capabilities.setCapability("tunnelName", "MavenSingle");
 
     System.out.println("name is" + capabilities);
     // create tunnel instance
@@ -43,7 +43,7 @@ public class MavenSingle implements IExecutionListener {
     options.put("user", username);
     options.put("logFile", "./");
     options.put("key", access_key);
-  //  options.put("tunnelName", "MavenSingle");
+    options.put("tunnelName", "MavenSingle");
 
     // start tunnel
     t.start(options);
